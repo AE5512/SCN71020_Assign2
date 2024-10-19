@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 
 // Tell the compiler these are external and written in C
+
 extern "C" void setLength(int input, int* length);
 extern "C" void setWidth(int input, int* width);
 extern "C" int getPerimeter(int* length, int* width);
@@ -20,8 +21,17 @@ namespace UnitTest1
 		
 		TEST_METHOD(TestMethod1)
 		{
+			// Had to make them varables to get this to work since it was expecting pointers not constants
+			int a = 2;  
+			int b = 13;
+			
+			int Result = getPerimeter(&a, &b);
 
+			Assert::AreEqual(52, Result);
 
+			Result = getArea(&a, &b);
+
+			Assert::AreEqual(26, Result);
 
 		}
 	};
