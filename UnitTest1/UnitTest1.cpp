@@ -43,5 +43,39 @@ namespace UnitTest1
 		}
 
 		// Question 2
+		TEST_METHOD(TestLength)
+		{
+			int Length = 50;
+
+			setLength(-1, &Length);
+
+			Assert::AreEqual(50, Length);
+
+			setLength(100, &Length);
+
+			Assert::AreEqual(50, Length);
+
+			setLength(60, &Length);
+
+			Assert::AreEqual(60, Length);
+
+		}
+		TEST_METHOD(TestWidth)
+		{
+			int Width = 50;
+
+			setLength(-1, &Width);
+
+			Assert::AreEqual(50, Width);
+
+			setLength(100, &Width);
+
+			Assert::AreEqual(50, Width);
+
+			setLength(60, &Width);
+
+			Assert::AreEqual(60, Width);
+
+		}
 	};
 }
