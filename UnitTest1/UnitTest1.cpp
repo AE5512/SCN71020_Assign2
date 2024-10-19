@@ -21,7 +21,7 @@ namespace UnitTest1
 		// Question one
 		TEST_METHOD(GetArea)
 		{
-			// Had to make them varables to get this to work since it was expecting pointers not constants
+			// Had to make them variables to get this to work since it was expecting pointers not constants
 			int a = 2;  
 			int b = 13;
 			
@@ -32,7 +32,7 @@ namespace UnitTest1
 		}
 		TEST_METHOD(GetPerimeter)
 		{
-			// Had to make them varables to get this to work since it was expecting pointers not constants
+			// Had to make them variables to get this to work since it was expecting pointers not constants
 			int a = 2;
 			int b = 13;
 
@@ -41,5 +41,7 @@ namespace UnitTest1
 			Assert::AreEqual(26, Result);
 
 		}
+
+		// Qeustion 2
 	};
 }
